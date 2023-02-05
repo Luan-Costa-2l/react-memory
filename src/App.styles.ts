@@ -5,4 +5,8 @@ export const  Container = styled.div`
     padding: 50px 0;
     display: flex;
     margin: auto;
-`
+`;
+
+export const Info = styled.div``;
+
+export const GridArea = styled.div``;
