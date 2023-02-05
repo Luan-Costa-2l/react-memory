@@ -3,7 +3,14 @@ import * as C from './App.styles';
 const App = () => {
 
   return (
-    <div>...</div>
+    <C.Container>
+      <C.Info>
+        ...
+      </C.Info>
+      <C.GridArea>
+        ...
+      </C.GridArea>
+    </C.Container>
   )
 }
 
