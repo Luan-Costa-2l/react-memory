@@ -1,5 +1,7 @@
 import * as C from './App.styles';
 
+import logoImage from './assets/devmemory_logo.png';
+
 const App = () => {
 
   return (
