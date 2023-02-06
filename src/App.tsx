@@ -7,7 +7,12 @@ const App = () => {
   return (
     <C.Container>
       <C.Info>
-        ...
+        <C.LogoLink>
+          <img src={logoImage} width="200" alt="" />
+        </C.LogoLink>
+        <C.InfoArea>
+          ...
+        </C.InfoArea>
       </C.Info>
       <C.GridArea>
         ...
