@@ -1,4 +1,5 @@
 import * as C from './App.styles';
+import { useState, useEffect } from 'react';
 
 import logoImage from './assets/devmemory_logo.png';
 import RestartIcon from './svgs/restart.svg';
