@@ -9,6 +9,11 @@ import { Button } from './components/Button';
 import { GridItemType } from './types/GridItemType';
 
 const App = () => {
+  const [moveCount, setMoveCount] = useState<number>(0);
+  const [shownCount, setShownCount] = useState<number>(0);
+  const [playing, setPlaying] = useState<boolean>(false);
+  const [timeElapsed, setTimeElapsed] = useState<number>(0);
+  const [gridItems, setGridItems] = useState<GridItemType[]>([]);
 
   return (
     <C.Container>
