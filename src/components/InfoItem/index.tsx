@@ -1,6 +1,11 @@
 import * as C from './styles';
 
-export const InfoItem = ({ label, value }) => {
+type Props = {
+    label: string;
+    value: string;
+}
+
+export const InfoItem = ({ label, value }: Props) => {
     return (
         <C.Container>
             <C.Label></C.Label>
