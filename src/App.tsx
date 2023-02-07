@@ -6,6 +6,8 @@ import RestartIcon from './svgs/restart.svg';
 import { InfoItem } from './components/InfoItem';
 import { Button } from './components/Button';
 
+import { GridItemType } from './types/GridItemType';
+
 const App = () => {
 
   return (
