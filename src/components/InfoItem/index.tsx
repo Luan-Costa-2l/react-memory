@@ -8,8 +8,8 @@ type Props = {
 export const InfoItem = ({ label, value }: Props) => {
     return (
         <C.Container>
-            <C.Label></C.Label>
-            <C.Value></C.Value>
+            <C.Label>{label}</C.Label>
+            <C.Value>{value}</C.Value>
         </C.Container>
     )
 }
