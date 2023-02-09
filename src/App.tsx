@@ -3,11 +3,13 @@ import { useState, useEffect } from 'react';
 
 import logoImage from './assets/devmemory_logo.png';
 import RestartIcon from './svgs/restart.svg';
+import b7svg from './svgs/b7.svg';
 import { InfoItem } from './components/InfoItem';
 import { Button } from './components/Button';
 
 import { GridItemType } from './types/GridItemType';
 import { items } from './data/items';
+import { GridItem } from './components/GridItem';
 
 const App = () => {
   const [moveCount, setMoveCount] = useState<number>(0);
@@ -15,6 +17,10 @@ const App = () => {
   const [playing, setPlaying] = useState<boolean>(false);
   const [timeElapsed, setTimeElapsed] = useState<number>(0);
   const [gridItems, setGridItems] = useState<GridItemType[]>([]);
+
+  useEffect(() => {
+    resetAndCreateGrid();
+  }, []);
 
   const resetAndCreateGrid = () => {
     // passo 1 - resetar o jogo
@@ -33,7 +39,7 @@ const App = () => {
     for (let w = 0; w < 2; w++) {
       for (let i = 0; i < items.length; i++) {
         let pos = -1;
-        while (pos < 0 || gridItems[pos].item !== null) {
+        while (pos < 0 || newGrid[pos].item !== null) {
           pos = Math.floor(Math.random() * (items.length * 2))
         }
         newGrid[pos].item = i;
@@ -60,7 +66,11 @@ const App = () => {
         <Button label='Restart' icon={RestartIcon} />
       </C.Info>
       <C.GridArea>
-        ...
+        <C.Grid>
+          {gridItems.map((item, index) => (
+            <GridItem key={index} item={item} onClick={handleItemClick} />
+          ))}
+        </C.Grid>
       </C.GridArea>
     </C.Container>
   )
