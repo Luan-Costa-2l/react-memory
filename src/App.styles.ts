@@ -17,11 +17,15 @@ export const LogoLink = styled.a`
     display: block;
 `;
 
-    img {
-        width: 100%;
-    }
+export const InfoArea = styled.div`
+    width: 100%;
+    margin: 10px 0;
 `;
 
-export const InfoArea = styled.div``;
+export const GridArea = styled.div`
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+`;
 
 export const GridArea = styled.div``;
