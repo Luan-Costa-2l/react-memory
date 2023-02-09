@@ -7,6 +7,7 @@ import { InfoItem } from './components/InfoItem';
 import { Button } from './components/Button';
 
 import { GridItemType } from './types/GridItemType';
+import { items } from './data/items';
 
 const App = () => {
   const [moveCount, setMoveCount] = useState<number>(0);
