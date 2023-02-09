@@ -15,7 +15,7 @@ export const Info = styled.div`
 
 export const LogoLink = styled.a`
     display: block;
-    margin-bottom: 20px;
+`;
 
     img {
         width: 100%;
