@@ -53,6 +53,17 @@ const App = () => {
     setPlaying(true);
   }
 
+  const handleItemClick = (index: number) => {
+    if (playing && index !== null && shownCount < 2) {
+      let newList = [...gridItems];
+      if (newList[index].permanentShown === false && newList[index].shown === false) {
+        newList[index].shown = true;
+        setShownCount(shownCount + 1);
+      }
+      setGridItems(newList);
+    }
+  }
+
   return (
     <C.Container>
       <C.Info>
