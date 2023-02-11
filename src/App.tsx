@@ -22,6 +22,35 @@ const App = () => {
     resetAndCreateGrid();
   }, []);
 
+  useEffect(() => {
+    if (shownCount === 2) {
+      let opened = gridItems.filter(item => item.shown === true);
+      if (opened.length === 2) {
+        if (opened[0].item === opened[1].item) {
+          let newGrid = [...gridItems];
+          for (let i in newGrid) {
+            if (newGrid[i].shown) {
+              newGrid[i].permanentShown = true;
+              newGrid[i].shown = false;
+            }
+          }
+          setGridItems(newGrid);
+          setShownCount(0);
+        } else {
+          let newGrid = [...gridItems];
+          setTimeout(() => {
+            for (let i in newGrid) {
+              newGrid[i].shown = false;
+            }
+            setGridItems(newGrid);
+            setShownCount(0);
+          }, 300);
+        }
+        setMoveCount(moveCount + 1);
+      }
+    }
+  }, [shownCount, gridItems]);
+
   const resetAndCreateGrid = () => {
     // passo 1 - resetar o jogo
     setShownCount(0);
