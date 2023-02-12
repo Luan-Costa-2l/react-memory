@@ -108,7 +108,7 @@ const App = () => {
       <C.GridArea>
         <C.Grid>
           {gridItems.map((item, index) => (
-            <GridItem key={index} item={item} onClick={handleItemClick} />
+            <GridItem key={index} item={item} onClick={() => handleItemClick(index)} />
           ))}
         </C.Grid>
       </C.GridArea>
