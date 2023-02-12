@@ -10,6 +10,7 @@ import { Button } from './components/Button';
 import { GridItemType } from './types/GridItemType';
 import { items } from './data/items';
 import { GridItem } from './components/GridItem';
+import { formatTimeElapsed } from './helpers/formatTimeElapsed';
 
 const App = () => {
   const [moveCount, setMoveCount] = useState<number>(0);
@@ -21,6 +22,13 @@ const App = () => {
   useEffect(() => {
     resetAndCreateGrid();
   }, []);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      if (playing) setTimeElapsed(timeElapsed + 1);
+    }, 1000);
+    return () => clearInterval(timer);
+  }, [playing, timeElapsed]);
 
   useEffect(() => {
     if (shownCount === 2) {
