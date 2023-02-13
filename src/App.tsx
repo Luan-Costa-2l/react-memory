@@ -58,6 +58,12 @@ const App = () => {
     }
   }, [shownCount, gridItems]);
 
+  useEffect(() => {
+    if (moveCount > 0 && gridItems.every(value => value.permanentShown)) {
+      setPlaying(false);
+    }
+  }, [moveCount]);
+
   const resetAndCreateGrid = () => {
     // passo 1 - resetar o jogo
     setShownCount(0);
