@@ -3,11 +3,12 @@ import * as C from './styles';
 type Props = {
     label: string;
     icon?: string;
+    onClick: () => void;
 }
 
-export const Button = ({ label, icon }: Props) => {
+export const Button = ({ label, icon, onClick }: Props) => {
     return (
-        <C.Container>
+        <C.Container onClick={onClick}>
             {icon &&
                 <C.IconArea>
                     <C.Icon src={icon} />
