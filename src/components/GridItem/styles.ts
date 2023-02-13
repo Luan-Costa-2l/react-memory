@@ -15,6 +15,7 @@ export const Container = styled.div<ContainerProps>`
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 `;
 
 export const Icon = styled.img<IconProps>`
