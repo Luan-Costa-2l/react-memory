@@ -16,6 +16,10 @@ export const Container = styled.div`
     &:hover {
         opacity: 0.8;
     }
+
+    @media (max-width: 760px) {
+        margin: auto;
+    }
 `;
 
 export const IconArea = styled.div`
