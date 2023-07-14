@@ -5,10 +5,19 @@ export const  Container = styled.div`
     padding: 50px 0;
     display: flex;
     margin: auto;
+    gap: 40px;
+
+    .buttonContainer {
+        display: none;
+    }
 
     @media(max-width: 760px) {
         flex-direction: column;
         padding: 50px 20px;
+
+        .buttonContainer {
+            display: block;
+        }
     }
 `;
 
@@ -16,11 +25,19 @@ export const Info = styled.div`
     max-width: 200px;
     font-family: Arial, Helvetica, sans-serif;
 
+    .buttonContainer {
+        display: block;
+    }
+
     @media (max-width: 760px) {
         width: 100%;
         max-width: 430px;
         text-align: center;
         margin: auto;
+
+        .buttonContainer {
+            display: none;
+        }
     }
 `;
 
@@ -45,7 +62,6 @@ export const GridArea = styled.div`
     
     @media(max-width:760px) {
         width: 100%;
-        margin-top: 50px;
         justify-content: center;
     }
 `;

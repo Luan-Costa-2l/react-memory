@@ -116,7 +116,9 @@ const App = () => {
           <InfoItem label='Tempo' value={formatTimeElapsed(timeElapsed)} />
           <InfoItem label='Movimentos' value={moveCount.toString()} />
         </C.InfoArea>
-        <Button label='Restart' icon={RestartIcon} onClick={resetAndCreateGrid} />
+        <div className='buttonContainer'>
+          <Button label='Restart' icon={RestartIcon} onClick={resetAndCreateGrid} />
+        </div>
       </C.Info>
       <C.GridArea>
         <C.Grid>
@@ -125,6 +127,9 @@ const App = () => {
           ))}
         </C.Grid>
       </C.GridArea>
+      <div className="buttonContainer">
+        <Button label='Restart' icon={RestartIcon} onClick={resetAndCreateGrid} />
+      </div>
     </C.Container>
   )
 }
